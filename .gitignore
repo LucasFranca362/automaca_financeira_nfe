@@ -7,3 +7,5 @@ __pycache__/
 *.pyc 
 #ignora notas fiscais de teste
 *.xml
+#ignora informaçoes que mudam dependendo do ambiente
+config.json
