@@ -1,0 +1,9 @@
+#ignora credenciais da API
+credencials.json
+#ignora o ambiente virtual do python
+venv/
+#ignora arquivos temporários do python
+__pycache__/
+*.pyc 
+#ignora notas fiscais de teste
+*.xml
