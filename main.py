@@ -1,3 +1,4 @@
+import json
 import os 
 from xml_parser import extrair_dados_nfe
 from planilha_manager import PlanilhaFinanceira
@@ -7,7 +8,11 @@ def rodar_automacao():
     
     base_dir = os.path.dirname(os.path.abspath(__file__))
     caminho_json = os.path.join(base_dir, 'credentials.json')
-    id_planilha = '1yKK8A5dkd1z-4TkgW__LSy2lowHaclUVj2l2Bsa0Evc'
+    caminho_config = os.path.join(base_dir, 'config.json')
+    with open(caminho_config, 'r') as arquivo:
+        config = json.load(arquivo)
+    
+    id_planilha = config['ID_PLANILHA']
     caminho_xml = os.path.join(base_dir, 'nota_exemplo.xml')
 
     print("Conectando com Google Sheets")
